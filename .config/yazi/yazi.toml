@@ -1,0 +1,28 @@
+[manager]
+show_hidden = true
+
+[preview]
+wrap = "yes"
+max_width = 1200
+max_height = 1200
+image_filter = "lanczos3"
+
+
+[opener]
+edit = [
+	{ run = '$EDITOR "$@"', desc = "Neovim", block = true, for = "unix" },
+]
+open = [
+	{ run = 'xdg-open "$1"', desc = "Open", for = "linux" },
+]
+reveal = [
+	{ run = 'xdg-open "$(dirname "$1")"', desc = "Reveal", for = "linux" },
+	{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
+]
+extract = [
+	{ run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
+]
+play = [
+	{ run = 'mpv --force-window "$@"', orphan = true, for = "unix" },
+	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
+]

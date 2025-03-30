@@ -1,0 +1,32 @@
+(defalias
+  capshold (multi f24 (tap-hold-press 0 200 esc lctl))
+  quote (multi f24 (tap-hold-press 200 200 ' rctl))
+  spchold (tap-hold-press 200 200 spc (layer-toggle motion))
+)
+
+(defsrc
+  esc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rctl
+)
+
+(deflayer main
+  caps
+  grv        1    2    3    4    5    6    7    8    9    0    -      =    bspc
+  tab        q    w    e    r    t    y    u    i    o    p    [      ]    \
+  @capshold  a    s    d    f    g    h    j    k    l    ;    @quote ret
+  lsft       z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl       lmet lalt           @spchold       ralt rctl
+)
+
+(deflayer motion
+  XX
+  XX         XX   XX   XX   XX   XX   XX     XX     XX   XX      XX   XX   XX   XX
+  XX         XX   XX   XX   XX   XX   XX     XX     XX   XX      XX   XX   XX   XX
+  XX         XX   XX   XX   XX   XX   left   down   up   right   XX   XX   XX
+  XX         XX   XX   XX   XX   XX   XX     XX     XX   XX      XX   XX
+  XX         XX   XX             XX                 XX   XX
+)
