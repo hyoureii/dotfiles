@@ -1,0 +1,15 @@
+shell-integration = zsh
+term = xterm-ghostty
+
+font-family = CaskaydiaCove Nerd Font
+font-size = 12
+theme = catppuccin-mocha
+
+keybind = clear
+
+bold-is-bright = true
+
+window-padding-x = 8
+window-padding-y = 8
+
+resize-overlay-position = bottom-right

@@ -1,0 +1,12 @@
+[Unit]
+Description=Set swww image
+After=graphical-session.target
+After=swww-daemon.service
+Requisite=swww-daemon.service
+
+[Service]
+WorkingDirectory=/home
+ExecStart=/usr/bin/bash /home/rei/.config/swww/swww.sh
+
+[Install]
+WantedBy=graphical-session.target
