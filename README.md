@@ -11,6 +11,9 @@
 
 ### Install
 
+> [!NOTE]
+> i haven't implemented auto-download, installing this dotfiles, using the install script means that you've installed packages that im using with this dotfiles, most importantly, [UWSM](https://github.com/Vladimir-csp/uwsm) as i'm using it to manage the environment variables, and [GNU Stow](https://github.com/aspiers/stow) to make a symlink to config directory.
+
 Clone this repo
 
 ```
@@ -18,16 +21,8 @@ git clone https://github.com/hyoureii/dotfiles.git $HOME/dotfiles
 cd $HOME/dotfiles
 ```
 
-Install [GNU Stow](https://github.com/aspiers/stow)
-
-> i'm using Arch *(BTW)* so i used pacman, use whatever package manager ur os is using
+Run the install script
 
 ```
-sudo pacman -S stow
-```
-
-Using stow to automatically create symlinks
-
-```
-stow
+./install.sh
 ```
