@@ -1,10 +1,7 @@
 return {
 	"ibhagwan/fzf-lua",
 	event = "VimEnter",
-	-- optional for icon support
-	-- dependencies = { "nvim-tree/nvim-web-devicons" },
-	-- or if using mini.icons/mini.nvim
-	dependencies = { "echasnovski/mini.icons" },
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = { "default", winopts = {
 		border = "solid",
 		preview = {

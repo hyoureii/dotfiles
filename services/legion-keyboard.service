@@ -1,0 +1,12 @@
+[Unit]
+Description=Legion Keyboard RGB
+Documentation=https://github.com/4JX/L5P-Keyboard-RGB
+After=multi-user.target
+Requisite=multi-user.target
+
+[Service]
+ExecStart=/home/rei/git/L5P-Keyboard-RGB/target/release/legion-kb-rgb custom-effect -p /home/rei/dotfiles/etc/L5P-Keyboard-RGB/double_swipe.json
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

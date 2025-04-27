@@ -36,15 +36,11 @@ local options = {
 	splitright = true, -- vertical split on the right
 	splitbelow = true, -- horizontal split on the bottom
 
-	list = true, -- show tabs, trailing ws and nbsp
-	listchars = { tab = "» ", trail = "·", nbsp = "␣" },
-
 	foldmethod = "expr", -- using expression to get fold level of a line
 	foldlevel = 99, -- start with all folds open
 	foldexpr = "nvim_treesitter#foldexpr()",
 
-	-- Builtin LSP options
-	completeopt = "menu,noinsert,popup,fuzzy",
+	wrap = false, -- no line wrap
 }
 
 for k, v in pairs(options) do

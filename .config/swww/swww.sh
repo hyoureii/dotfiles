@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sleep 0.2
+
 WALLPAPER_DIR=~/Wallpapers/
 
 #pick a random wallpaper

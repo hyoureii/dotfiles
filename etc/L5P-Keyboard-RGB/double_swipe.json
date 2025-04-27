@@ -1,0 +1,109 @@
+{
+  "effect_steps": [
+    {
+      "rgb_array": [8,6,16,8,6,16,8,6,16,66,2,107],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 0
+    },
+    {
+      "rgb_array": [8,6,16,8,6,16,66,2,107,158,0,255],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 0
+    },
+    {
+      "rgb_array": [8,6,16,45,4,67,125,0,255,45,4,67],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 0
+    },
+    {
+      "rgb_array": [23,4,89,93,0,255,33,4,88,8,6,16],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 0
+    },
+    {
+      "rgb_array": [61,0,255,23,4,89,8,6,16,8,6,16],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 0
+    },
+    {
+      "rgb_array": [23,4,89,8,6,16,8,6,16,8,6,16],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 20
+    },
+    {
+      "rgb_array": [8,6,16,8,6,16,8,6,16,66,2,107],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 0
+    },
+    {
+      "rgb_array": [8,6,16,8,6,16,66,2,107,158,0,255],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 0
+    },
+    {
+      "rgb_array": [8,6,16,45,4,67,125,0,255,45,4,67],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 0
+    },
+    {
+      "rgb_array": [23,4,89,93,0,255,33,4,88,8,6,16],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 0
+    },
+    {
+      "rgb_array": [61,0,255,23,4,89,8,6,16,8,6,16],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 0
+    },
+    {
+      "rgb_array": [23,4,89,8,6,16,8,6,16,8,6,16],
+      "step_type": "Transition",
+      "brightness": 2,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 0
+    },
+    {
+      "rgb_array": [8,6,16,8,6,16,8,6,16,8,6,16],
+      "step_type": "Transition",
+      "brightness": 1,
+      "steps": 30,
+      "delay_between_steps": 0,
+      "sleep": 10000
+    }
+  ],
+  "should_loop": true
+}

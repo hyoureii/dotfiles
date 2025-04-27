@@ -24,5 +24,6 @@ _darcs
 
 /install\.sh
 ^/cache
-^/kanata.*
+^/etc
+^/services
 .*wants

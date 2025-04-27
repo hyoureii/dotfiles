@@ -1,15 +1,15 @@
+HISTSIZE=1000000
+SAVESIZE=1000000
+HISTFILE="$XDG_CACHE_HOME/.zsh_history"
+
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
 	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-HISTSIZE=1000000
-SAVESIZE=1000000
-HISTFILE="$XDG_CACHE_HOME/zsh_history"
-
-ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
 # Configured from compinstall
 
@@ -31,14 +31,17 @@ zmodload zsh/complist
 autoload -Uz compinit && compinit
 
 # Options
-setopt append_history share_history
+setopt append_history
+setopt share_history
 setopt histfindnodups
 setopt histignorealldups
 setopt histignorespace
-setopt auto_menu menu_complete
+setopt auto_menu
+setopt menu_complete
 setopt autocd
 setopt auto_param_slash
-setopt no_case_glob no_case_match
+setopt no_case_glob
+setopt no_case_match
 setopt globdots
 setopt extended_glob
 setopt interactive_comments
@@ -75,7 +78,6 @@ alias la='ls -lah --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias nv='nvim'
 alias cl='clear'
-alias fk='sudo !!'
 alias yz='yazi'
 # alias cat='bat'
 
