@@ -8,5 +8,3 @@ DIRS="$(find $CWD -type d | grep ".config" | sed '/systemd\/.*wants/d; s/dotfile
 echo $DIRS > $CWD/cache/dirs.txt
 
 mkdir -p $(cat $CWD/cache/dirs.txt)
-
-stow -R -d $CWD -t $HOME .

@@ -1,95 +1,39 @@
 * {
 	transition: none;
 	box-shadow: none;
-	font-family: "CaskaydiaCove Nerd Font";
-	font-size: 18px;
-	color: #9b7e74;
-	padding: 1px 2px;
+	font-family: "Maple Mono NL NF CN";
+	font-size: 20;
+	padding: 1px 4px;
+	border-radius: 0;
+	border: none;
 }
 
-#waybar {
-	margin-top: 14px;
-	background: #291f20;
-	border-radius: 0px;
-	border: 2px solid #785b56;
+window#waybar {
+	background:
+		linear-gradient(90deg, alpha(#f54c53, 0.3), transparent 25%),
+		#ffefee;
 }
 
-tooltip {
-	border-radius: 10px;
-	background-color: #291f20;
-}
-
-#custom-launcher {
-	margin: 4px 1px 4px 5px;
-	padding: 0 6px;
-	background-color: #513d3d;
-	border-radius: 10px;
-	min-width: 24px;
-}
-
-#workspaces {
-	margin: 0 3px;
-	color: transparent;
-}
+/* #tray { */
+/* 	border-radius: 8px; */
+/* 	background: alpha(#000, 0.8); */
+/* } */
 
 #workspaces button {
-	margin: 3px 0;
-	padding: 0 4px;
-}
-
-#workspaces button:hover {
-	border: 1px solid #614847;
+	padding: 3px 1px;
+	margin: 0 2px 0 2px;
 }
 
 #workspaces button.active {
-	border: 2px solid #614847;
+	background:
+		linear-gradient(transparent, transparent 75%, alpha(#f54c53, 0.2)),
+		linear-gradient(transparent, transparent 40%, alpha(#f54c53, 0.2));
 }
 
-#workspaces button.empty {
-	background-color: #4a393a;
-	border-radius: 0px;
-}
-
-#workspaces button.urgent * {
-	color: rgba(246, 71, 71, 0.8);
-}
-
-#tray {
-	margin: 3px 2px;
-	border-radius: 12px;
-	background-color: #614847;
-}
-
-#tray menu {
-	background-color: #291f20;
-}
-
-#tray * {
-	padding: 0 6px;
-}
-
-#mode,
-#battery,
-#cpu,
-#network,
-#pulseaudio,
-#backlight,
-#clock {
-	margin: 4px 2px;
-	padding: 0 6px;
-	border-radius: 20px;
-	min-width: 10px;
-	background-color: transparent;
+#workspaces button:hover {
+	background: #f8bfc6;
 }
 
 #clock {
-	margin: 4px 2px;
-}
-
-#custom-power {
-	margin: 4px 5px 4px 1px;
-	padding: 0 6px;
-	background-color: #513d3d;
-	border-radius: 10px;
-	min-width: 15px;
+	margin-left: 12px;
 }

@@ -2,6 +2,7 @@
   capshold (multi f24 (tap-hold-press 0 200 esc lctl))
   quote (multi f24 (tap-hold-press 200 200 ' rctl))
   spchold (tap-hold-press 200 200 spc (layer-toggle motion))
+  spcrel (multi (release-key spc) use-defsrc)
 )
 
 (defsrc
@@ -23,10 +24,10 @@
 )
 
 (deflayer motion
-  XX
-  XX         XX   XX   XX   XX   XX   XX     XX     XX   XX      XX   XX   XX   XX
-  XX         XX   XX   XX   XX   XX   XX     XX     XX   XX      XX   XX   XX   XX
-  XX         XX   XX   XX   XX   XX   left   down   up   right   XX   XX   XX
-  XX         XX   XX   XX   XX   XX   XX     XX     XX   XX      XX   XX
-  XX         XX   XX             XX                 XX   XX
+  @spcrel
+  @spcrel         @spcrel   @spcrel   @spcrel   @spcrel   @spcrel   @spcrel     @spcrel     @spcrel   @spcrel      @spcrel   @spcrel   @spcrel   @spcrel
+  @spcrel         @spcrel   @spcrel   @spcrel   @spcrel   @spcrel   @spcrel     @spcrel     @spcrel   @spcrel      @spcrel   @spcrel   @spcrel   @spcrel
+  @spcrel         @spcrel   @spcrel   @spcrel   @spcrel   @spcrel   left        down        up        right        @spcrel   @spcrel   @spcrel
+  @spcrel         @spcrel   @spcrel   @spcrel   @spcrel   @spcrel   @spcrel     @spcrel     @spcrel   @spcrel      @spcrel   @spcrel
+  @spcrel         @spcrel   @spcrel                       @spcrel                           @spcrel   @spcrel
 )
