@@ -1,15 +1,15 @@
+HISTSIZE=1000000
+SAVEHIST=1000000
+HISTFILE="$XDG_CACHE_HOME/.zsh_history"
+
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
 	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-HISTSIZE=1000000
-SAVEHIST=1000000
-HISTFILE="$XDG_CACHE_HOME/.zsh_history"
-
-ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
 # Configured from compinstall
 
@@ -31,8 +31,9 @@ zmodload zsh/complist
 autoload -Uz compinit && compinit
 
 # Options
-setopt append_history
-setopt share_history
+setopt appendhistory
+setopt inc_append_history
+setopt sharehistory
 setopt histfindnodups
 setopt histignorealldups
 setopt histignorespace
@@ -86,6 +87,17 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # fzf
 source <(fzf --zsh)
+
+zle -N fzf-history-widget-orig fzf-history-widget
+
+# Wrapper for enabling history auto-reloading for fzf
+_fzf-history-widget-autoreload() {
+	fc -RI
+	zle fzf-history-widget-orig "$@"
+}
+
+zle -N fzf-history-widget _fzf-history-widget-autoreload
+bindkey '^R' fzf-history-widget
 
 # Source powerlevel10k
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
