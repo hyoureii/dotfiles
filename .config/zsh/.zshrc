@@ -88,17 +88,6 @@ eval "$(zoxide init --cmd cd zsh)"
 # fzf
 source <(fzf --zsh)
 
-zle -N fzf-history-widget-orig fzf-history-widget
-
-# Wrapper for enabling history auto-reloading for fzf
-_fzf-history-widget-autoreload() {
-	fc -RI
-	zle fzf-history-widget-orig "$@"
-}
-
-zle -N fzf-history-widget _fzf-history-widget-autoreload
-bindkey '^R' fzf-history-widget
-
 # Source powerlevel10k
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
